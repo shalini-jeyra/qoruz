@@ -93,22 +93,26 @@ class CardWidget extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              getCircleWidget(),
-              const SizedBox(
-                height: 5,
-              ),
-              Container(
-                width: 2,
-                height: 90,
-                child: CustomPaint(
-                  painter: DottedLinePainter(),
+          Padding(
+            padding: const EdgeInsets.only(top:2.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                getCircleWidget(),
+                const SizedBox(
+                  height: 5,
                 ),
-              ),
-            ],
+                Container(
+                  width: 2,
+                  height: 90,
+                  child: CustomPaint(
+                    painter: DottedLinePainter(),
+                  ),
+                ),
+              ],
+            ),
           ),
+          SizedBox(width: 5,),
           Expanded(
             child: Card(
               color: cardColor,
